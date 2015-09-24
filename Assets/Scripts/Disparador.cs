@@ -36,7 +36,7 @@ public class Disparador : MonoBehaviour {
 			if ((Input.GetAxis ("Fire1")==1||(Input.GetAxis ("Fire1")==-1))){	
 				AmmoType.GetComponent<SpriteRenderer>().color = this.GetComponentInParent<SpriteRenderer>().color;
 				AmmoType.GetComponent<Transform> ().position = this.transform.position;
-				AmmoType.GetComponent<Proyectil> ().Angle = this.transform.rotation;
+				AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
 				Instantiate (AmmoType);
 				SoundEffectsHelper1.Instance.makeShootingSound();
 				//StartCoroutine(sr (1));
@@ -46,7 +46,7 @@ public class Disparador : MonoBehaviour {
 			if (Input.GetKey ("up") ){
 				AmmoType.GetComponent<SpriteRenderer>().color = this.GetComponentInParent<SpriteRenderer>().color;
 				AmmoType.GetComponent<Transform> ().position = this.transform.position;
-				AmmoType.GetComponent<Proyectil> ().Angle = this.transform.rotation;
+				AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
 				Instantiate (AmmoType);
 				SoundEffectsHelper1.Instance.makeShootingSound();
 				//StartCoroutine(sr (1));

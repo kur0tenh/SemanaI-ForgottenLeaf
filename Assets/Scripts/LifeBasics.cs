@@ -13,10 +13,10 @@ public class LifeBasics : MonoBehaviour {
 	public bool isEnemy = false;
 	public bool isPlayer = false;
 	public bool isBoss = false;
+	public static int cont;
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -27,7 +27,9 @@ public class LifeBasics : MonoBehaviour {
 			}
 			
 		} else {
-			Destroy(this.gameObject);
+			cont--;
+			//Destroy(this.gameObject);
+			this.gameObject.SetActive(false); 
 
 		}
 	}	
@@ -40,7 +42,7 @@ public class LifeBasics : MonoBehaviour {
 	}
 	void OnTriggerExit2D(Collider2D other){
 		if (other.tag == "MainCamera"&&this.isEnemy) {
-			this.gameObject.SetActive(false);
+			//this.gameObject.SetActive(false);
 		}
 	}
 	void OnTriggerEnter2D(Collider2D other){

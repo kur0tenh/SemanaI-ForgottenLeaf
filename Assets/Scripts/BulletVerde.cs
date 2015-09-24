@@ -28,11 +28,12 @@ public class BulletVerde : MonoBehaviour {
 		if (other.gameObject.GetComponent<LifeBasics>()==null) {
 			Destroy(this.gameObject);
 		}
-		if (other.gameObject.GetComponent<LifeBasics> () != null) {
+		if (other.gameObject.GetComponent<LifeBasics>()!=null) {
 			if (other.gameObject.GetComponent<LifeBasics> ().isPlayer&& other.gameObject.GetComponent<SpriteRenderer>().color.Equals(this.gameObject.GetComponent<SpriteRenderer>().color)) {
-				other.gameObject.GetComponent<LifeBasics> ().LifeSettings.lifes--;
-				Destroy (this.gameObject);
+				if (other.gameObject.GetComponent<LifeBasics> ().isPlayer) {
+					other.gameObject.GetComponent<LifeBasics> ().LifeSettings.lifes--;
+					Destroy (this.gameObject);
 			}
 		}
 	}
-}
+	}}

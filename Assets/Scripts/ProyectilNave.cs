@@ -28,10 +28,12 @@ public class ProyectilNave : MonoBehaviour {
 		if (other.gameObject.GetComponent<LifeBasics>()==null) {
 			Destroy(this.gameObject);
 		}
+		if (other.gameObject.GetComponent<LifeBasics>()!=null) {
 		if (other.gameObject.GetComponent<LifeBasics> ().isPlayer&& other.gameObject.GetComponent<SpriteRenderer>().color.Equals(this.gameObject.GetComponent<SpriteRenderer>().color)) {
 			if (other.gameObject.GetComponent<LifeBasics> ().isPlayer) {
 				other.gameObject.GetComponent<LifeBasics> ().LifeSettings.lifes--;
 				Destroy (this.gameObject);
+			}
 			}
 		}
 	}

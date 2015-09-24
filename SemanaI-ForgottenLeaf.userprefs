@@ -1,12 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\LifeBasics.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Disparador.cs">
     <Files>
-      <File FileName="Assets\Proyectil.cs" Line="20" Column="3" />
-      <File FileName="Assets\Naves\nave4\Pnave.cs" Line="1" Column="1" />
-      <File FileName="Assets\Naves\BulletVerde.cs" Line="1" Column="1" />
-      <File FileName="Assets\Naves\ProyectilNave.cs" Line="1" Column="1" />
-      <File FileName="Assets\LifeBasics.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Disparador.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Disparo.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraFollowing.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LifeBasics.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\creatEnemy.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

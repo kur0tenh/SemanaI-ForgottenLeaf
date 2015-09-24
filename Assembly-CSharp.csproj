@@ -45,10 +45,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Proyectil (1).cs" />
      <Compile Include="Assets\Scripts\BulletVerde.cs" />
      <Compile Include="Assets\Scripts\CameraFollowing.cs" />
      <Compile Include="Assets\Scripts\ColorVerde.cs" />
      <Compile Include="Assets\Scripts\Disparador.cs" />
+     <Compile Include="Assets\Scripts\Disparo.cs" />
      <Compile Include="Assets\Scripts\Dnave4.cs" />
      <Compile Include="Assets\Scripts\LifeBasics.cs" />
      <Compile Include="Assets\Scripts\Mirror.cs" />
@@ -58,7 +60,6 @@
      <Compile Include="Assets\Scripts\ParticleColor.cs" />
      <Compile Include="Assets\Scripts\Partverde.cs" />
      <Compile Include="Assets\Scripts\Pnave.cs" />
-     <Compile Include="Assets\Scripts\Proyectil.cs" />
      <Compile Include="Assets\Scripts\ProyectilNave.cs" />
      <Compile Include="Assets\Scripts\Rnave.cs" />
      <Compile Include="Assets\Scripts\Rotation.cs" />
