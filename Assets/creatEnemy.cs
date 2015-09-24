@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class creatEnemy : MonoBehaviour {
+	float height = 0;
+	float width = 0;
+
 	private int randy;
 	public GameObject enemy;
 	public GameObject enemy1;
@@ -14,7 +17,8 @@ public class creatEnemy : MonoBehaviour {
 	GameObject[] levels = new GameObject[7]; 
 	// Use this for initialization
 	void Start () {
-		
+		height = this.GetComponentInParent<Camera>().orthographicSize*2f;
+		width = this.GetComponentInParent<Camera>().aspect*height;
 		levels[0] = enemy;
 		levels[1] = enemy1;
 		levels[2] = enemy2;
@@ -23,8 +27,7 @@ public class creatEnemy : MonoBehaviour {
 		levels[5] = enemy5;
 		levels[6] = enemy6;
 	}
-	float height = this.GetComponentInParent<Camera>().orthographicSize*2f;
-	float width = this.GetComponentInParent<Camera>().aspect*height;
+
 	// Update is called once per frame
 	void FixedUpdate () {
 
