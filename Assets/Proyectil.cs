@@ -22,7 +22,7 @@ public class Proyectil : MonoBehaviour {
 		//this.GetComponent<Rigidbody2D>().AddForce(Fwrd*Magnitude);
 
 	}
-	void OnTriggerEnter2D(Collider2D other){
+	void OnTriggerExit2D(Collider2D other){
 		if (other.tag == "MainCamera") {
 			Destroy(this.gameObject);
 		}

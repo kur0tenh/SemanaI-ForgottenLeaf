@@ -38,14 +38,14 @@ public class creatEnemy : MonoBehaviour {
 			this.transform.localPosition = new Vector3 (height,Random.Range(-width/2,width/2));
 			if (randy == 1) {
 				//GameObject Spawn = (GameObject)Instantiate (levels [Random.Range (0, 6)], transform.position, transform.rotation);
-				Instantiate (levels[Random.Range(0,6)],this.transform.position,this.transform.rotation);
+				Instantiate (levels[Random.Range(0,6)],this.transform.localPosition,this.transform.localRotation);
 			}
 		}
 		if ((mrandy % 3) == 0) {
 			this.transform.localPosition = new Vector3 (-height,Random.Range(-width/2,width/2));
 			if (randy == 1) {
 				//GameObject Spawn = (GameObject)Instantiate (levels [Random.Range (0, 6)], transform.position, transform.rotation);
-				Instantiate (levels[Random.Range(0,6)],this.transform.position,this.transform.rotation);
+				Instantiate (levels[Random.Range(0,6)],this.transform.position,this.transform.localRotation);
 			}
 		}
 	

@@ -19,7 +19,7 @@ public class ProyectilNave : MonoBehaviour {
 	void Update () {
 		this.transform.Translate(Fwrd * Magnitude);
 	}
-	void OnTriggerEnter2D(Collider2D other){
+	void OnTriggerExit2D(Collider2D other){
 		if (other.tag == "MainCamera") {
 			Destroy (this.gameObject);
 		}
