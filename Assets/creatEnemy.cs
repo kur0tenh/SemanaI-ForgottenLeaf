@@ -32,6 +32,9 @@ public class creatEnemy : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+		Invoke ("Spawn", 3f);
+	}
+	void Spawn(){
 		mrandy =Random.Range (0, 100);
 		randy = Random.Range (0, 400);
 		if ((mrandy % 2) == 0) {
@@ -45,9 +48,8 @@ public class creatEnemy : MonoBehaviour {
 			this.transform.localPosition = new Vector3 (-height,Random.Range(-width/2,width/2));
 			if (randy == 1) {
 				//GameObject Spawn = (GameObject)Instantiate (levels [Random.Range (0, 6)], transform.position, transform.rotation);
-				Instantiate (levels[Random.Range(0,6)],this.transform.position,this.transform.localRotation);
+				Instantiate (levels[Random.Range(0,6)],this.transform.localPosition,this.transform.localRotation);
 			}
 		}
-	
 	}
 }
