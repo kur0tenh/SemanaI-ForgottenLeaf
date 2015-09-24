@@ -45,28 +45,28 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraFollowing.cs" />
-     <Compile Include="Assets\Disparador.cs" />
-     <Compile Include="Assets\LifeBasics.cs" />
-     <Compile Include="Assets\Mirror.cs" />
-     <Compile Include="Assets\Movement.cs" />
-     <Compile Include="Assets\Movement2.cs" />
-     <Compile Include="Assets\Naves\BulletVerde.cs" />
-     <Compile Include="Assets\Naves\ColorVerde.cs" />
-     <Compile Include="Assets\Naves\PartCyan.cs" />
-     <Compile Include="Assets\Naves\Partverde.cs" />
-     <Compile Include="Assets\Naves\ProyectilNave.cs" />
-     <Compile Include="Assets\Naves\nave4\Dnave4.cs" />
-     <Compile Include="Assets\Naves\nave4\Pnave.cs" />
-     <Compile Include="Assets\Naves\nave4\Rnave.cs" />
-     <Compile Include="Assets\ParticleColor.cs" />
-     <Compile Include="Assets\Proyectil.cs" />
-     <Compile Include="Assets\Rotation.cs" />
-     <Compile Include="Assets\Rotation2.cs" />
-     <Compile Include="Assets\SoundEffectsHelper1.cs" />
-     <Compile Include="Assets\colorCyan.cs" />
-     <Compile Include="Assets\creatEnemy.cs" />
-     <Compile Include="Assets\creator.cs" />
+     <Compile Include="Assets\Scripts\BulletVerde.cs" />
+     <Compile Include="Assets\Scripts\CameraFollowing.cs" />
+     <Compile Include="Assets\Scripts\ColorVerde.cs" />
+     <Compile Include="Assets\Scripts\Disparador.cs" />
+     <Compile Include="Assets\Scripts\Dnave4.cs" />
+     <Compile Include="Assets\Scripts\LifeBasics.cs" />
+     <Compile Include="Assets\Scripts\Mirror.cs" />
+     <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\Movement2.cs" />
+     <Compile Include="Assets\Scripts\PartCyan.cs" />
+     <Compile Include="Assets\Scripts\ParticleColor.cs" />
+     <Compile Include="Assets\Scripts\Partverde.cs" />
+     <Compile Include="Assets\Scripts\Pnave.cs" />
+     <Compile Include="Assets\Scripts\Proyectil.cs" />
+     <Compile Include="Assets\Scripts\ProyectilNave.cs" />
+     <Compile Include="Assets\Scripts\Rnave.cs" />
+     <Compile Include="Assets\Scripts\Rotation.cs" />
+     <Compile Include="Assets\Scripts\Rotation2.cs" />
+     <Compile Include="Assets\Scripts\SoundEffectsHelper1.cs" />
+     <Compile Include="Assets\Scripts\colorCyan.cs" />
+     <Compile Include="Assets\Scripts\creatEnemy.cs" />
+     <Compile Include="Assets\Scripts\creator.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

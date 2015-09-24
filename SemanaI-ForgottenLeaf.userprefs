@@ -1,17 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Naves\BulletVerde.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\LifeBasics.cs">
     <Files>
-      <File FileName="Assets\creatEnemy.cs" Line="68" Column="80" />
-      <File FileName="Assets\Disparador.cs" Line="1" Column="1" />
-      <File FileName="Assets\Proyectil.cs" Line="25" Column="2" />
+      <File FileName="Assets\Proyectil.cs" Line="20" Column="3" />
       <File FileName="Assets\Naves\nave4\Pnave.cs" Line="1" Column="1" />
-      <File FileName="Assets\Naves\BulletVerde.cs" Line="24" Column="30" />
-      <File FileName="Assets\Naves\ProyectilNave.cs" Line="22" Column="20" />
+      <File FileName="Assets\Naves\BulletVerde.cs" Line="1" Column="1" />
+      <File FileName="Assets\Naves\ProyectilNave.cs" Line="1" Column="1" />
+      <File FileName="Assets\LifeBasics.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\kur0\Desktop\SemanaI-ForgottenLeaf\SemanaI-ForgottenLeaf\Assets\Naves\BulletVerde.cs" line="27" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

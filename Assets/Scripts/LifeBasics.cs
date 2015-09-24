@@ -33,8 +33,8 @@ public class LifeBasics : MonoBehaviour {
 	}	
 	void OnCollisionEnter2D(Collision2D HarmfullObject){
 		if (HarmfullObject.gameObject.GetComponent<LifeBasics> ()!=null) {
-			if(isEnemy && this.isPlayer){
-				this.LifeSettings.health--;
+			if(HarmfullObject.gameObject.GetComponent<LifeBasics>().isEnemy && this.isPlayer){
+				this.LifeSettings.lifes--;
 			}
 		} 
 	}

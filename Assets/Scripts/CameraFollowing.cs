@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class CameraFollowing : MonoBehaviour {
+	float ColHeight = 0;
+	float ColWidth = 0;
+
 
 	// the target the camera should follow (usually the player)
 	public Transform target;
@@ -26,6 +29,12 @@ public class CameraFollowing : MonoBehaviour {
 	private float maxY = 0f;
 	
 	void Start () {
+
+		ColHeight = this.GetComponentInParent<Camera>().orthographicSize*2;
+		ColWidth = this.GetComponentInParent<Camera>().aspect*ColHeight;
+
+		this.GetComponent<BoxCollider2D> ().size = new Vector2 (ColWidth+20,ColHeight+20);
+
 		// the map MinX and MinY are the position that the camera STARTS
 		minX = transform.position.x;
 		minY = transform.position.y;
