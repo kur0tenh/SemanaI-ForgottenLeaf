@@ -38,4 +38,15 @@ public class LifeBasics : MonoBehaviour {
 			}
 		} 
 	}
+	void OnTriggerExit2D(Collider2D other){
+		if (other.tag == "MainCamera"&&this.isEnemy) {
+			this.gameObject.SetActive(false);
+		}
+	}
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.tag == "MainCamera"&&this.isEnemy) {
+			//this.gameObject.SetActive(true);
+
+		}
+	}
 }
