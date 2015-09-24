@@ -13,5 +13,6 @@ public class Movement : MonoBehaviour {
 	void FixedUpdate () {
 		Move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"),0);
 		this.transform.Translate(Move*MovementSensitivity);
+
 	}
 }
