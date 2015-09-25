@@ -19,7 +19,7 @@ public class balaHijo : MonoBehaviour {
 			sr.startColor = this.GetComponentInParent<SpriteRenderer>().color;
 		}
 		this.transform.rotation = this.transform.parent.rotation;
-		this.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
+		this.GetComponent<SpriteRenderer> ().color = Rotation.elColor;
 		Destroy (gameObject, tiempoMuerte);
 	}
 	
@@ -40,6 +40,7 @@ public class balaHijo : MonoBehaviour {
 		}
 		if (other.gameObject.GetComponent<LifeBasics> () != null) {
 			if (!other.gameObject.GetComponent<LifeBasics> ().isPlayer && (other.gameObject.GetComponent<SpriteRenderer>().color.Equals(this.gameObject.GetComponent<SpriteRenderer>().color)||other.gameObject.GetComponent<SpriteRenderer>().color.Equals(Color.white))) {
+				score.puntaje = score.puntaje+50;
 				other.gameObject.GetComponent<LifeBasics>().LifeSettings.lifes--;
 				Destroy(this.gameObject);
 			}
