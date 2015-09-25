@@ -57,11 +57,11 @@ public class Rotation : MonoBehaviour {
 		}
 		if (other.gameObject.tag == "doble" && AmmoType != Ammotype2) {
 			foreach(Disparador sr in GetComponentsInChildren<Disparador>()) {
-				sr.AmmoType =Ammotype3;
+				sr.AmmoType =Ammotype2;
 			}
 			Destroy (other.gameObject);
 			AmmoType = Ammotype2;
-		} else if (other.gameObject.tag == "doble") {
+		} else if (other.gameObject.tag == "doble" && AmmoType == Ammotype2 ) {
 			foreach(Disparador sr in GetComponentsInChildren<Disparador>()) {
 				sr.AmmoType =Ammotype3;
 			}

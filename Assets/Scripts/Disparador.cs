@@ -42,6 +42,7 @@ public class Disparador : MonoBehaviour {
 					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
 					AmmoType.GetComponent<Transform> ().position = this.transform.position;
 					AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
+					AmmoType.GetComponent<Disparo> ().Angle2 =Quaternion.Euler(0,0,0);
 					Instantiate (AmmoType);
 					SoundEffectsHelper1.Instance.makeShootingSound ();
 					//StartCoroutine(sr (1));
@@ -52,6 +53,7 @@ public class Disparador : MonoBehaviour {
 					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
 					AmmoType.GetComponent<Transform> ().position = this.transform.position;
 					AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
+					AmmoType.GetComponent<Disparo> ().Angle2 =Quaternion.Euler(0,0,0);
 					Instantiate (AmmoType);
 					SoundEffectsHelper1.Instance.makeShootingSound ();
 					//StartCoroutine(sr (1));
@@ -63,7 +65,8 @@ public class Disparador : MonoBehaviour {
 				if ((Input.GetAxis ("Fire1") == 1 || (Input.GetAxis ("Fire1") == -1))) {	
 					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
 					AmmoType.GetComponent<Transform> ().position = this.transform.position;
-					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+45);
+					AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
+					AmmoType.GetComponent<Disparo> ().Angle2 =Quaternion.Euler(0,0,90);
 					Instantiate (AmmoType);
 					SoundEffectsHelper1.Instance.makeShootingSound ();
 					//StartCoroutine(sr (1));
@@ -73,7 +76,8 @@ public class Disparador : MonoBehaviour {
 				if (Input.GetKey ("up")) {
 					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
 					AmmoType.GetComponent<Transform> ().position = this.transform.position;
-					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+45);
+					AmmoType.GetComponent<Disparo> ().Angle =this.transform.rotation;
+					AmmoType.GetComponent<Disparo> ().Angle2 =Quaternion.Euler(0,0,90);
 					Instantiate (AmmoType);
 					SoundEffectsHelper1.Instance.makeShootingSound ();
 					//StartCoroutine(sr (1));
@@ -86,7 +90,8 @@ public class Disparador : MonoBehaviour {
 				if ((Input.GetAxis ("Fire1") == 1 || (Input.GetAxis ("Fire1") == -1))) {	
 					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
 					AmmoType.GetComponent<Transform> ().position = this.transform.position;
-					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+270);
+					AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
+					AmmoType.GetComponent<Disparo> ().Angle2 =Quaternion.Euler(0,0,270);
 					Instantiate (AmmoType);
 					SoundEffectsHelper1.Instance.makeShootingSound ();
 					//StartCoroutine(sr (1));
@@ -96,7 +101,8 @@ public class Disparador : MonoBehaviour {
 				if (Input.GetKey ("up")) {
 					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
 					AmmoType.GetComponent<Transform> ().position = this.transform.position;
-					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+270);
+					AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
+					AmmoType.GetComponent<Disparo> ().Angle2 =Quaternion.Euler(0,0,270);
 					Instantiate (AmmoType);
 					SoundEffectsHelper1.Instance.makeShootingSound ();
 					//StartCoroutine(sr (1));
@@ -109,7 +115,8 @@ public class Disparador : MonoBehaviour {
 				if ((Input.GetAxis ("Fire1") == 1 || (Input.GetAxis ("Fire1") == -1))) {	
 					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
 					AmmoType.GetComponent<Transform> ().position = this.transform.position;
-					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+180);
+					AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
+					AmmoType.GetComponent<Disparo> ().Angle2 =Quaternion.Euler(0,0,180);
 					Instantiate (AmmoType);
 					SoundEffectsHelper1.Instance.makeShootingSound ();
 					//StartCoroutine(sr (1));
@@ -119,7 +126,8 @@ public class Disparador : MonoBehaviour {
 				if (Input.GetKey ("up")) {
 					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
 					AmmoType.GetComponent<Transform> ().position = this.transform.position;
-					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+180);
+					AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
+					AmmoType.GetComponent<Disparo> ().Angle2 =Quaternion.Euler(0,0,180);
 					Instantiate (AmmoType);
 					SoundEffectsHelper1.Instance.makeShootingSound ();
 					//StartCoroutine(sr (1));
