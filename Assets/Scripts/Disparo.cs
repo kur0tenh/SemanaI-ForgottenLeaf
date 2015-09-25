@@ -4,8 +4,7 @@ using System.Collections;
 public class Disparo : MonoBehaviour {
 
 	public Quaternion Angle = Quaternion.Euler(0,0,0);
-	public Quaternion Angle2 = Quaternion.Euler(0,0,0);
-
+	public Vector3 Angle2 = new Vector3(0,0,0);
 	public float Magnitude = 1;
 	public float tiempoMuerte;
 	public GameObject roti;
@@ -18,8 +17,10 @@ public class Disparo : MonoBehaviour {
 			sr.material.color = this.GetComponent<SpriteRenderer>().color;;
 		}
 		this.transform.rotation = Angle;
-		this.transform.Rotate(new Vector3(Angle2.x,Angle2.y,Angle2.z));
+		if (Angle2.z != 0);
+		this.transform.Rotate (Angle2.x, Angle2.y, Angle2.z);
 		Destroy (gameObject, tiempoMuerte);
+		Debug.Log (Angle2);
 	}
 
 	// Update is called once per frame
