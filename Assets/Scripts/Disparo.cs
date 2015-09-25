@@ -21,6 +21,7 @@ public class Disparo : MonoBehaviour {
 		this.transform.Rotate (Angle2.x, Angle2.y, Angle2.z);
 		Destroy (gameObject, tiempoMuerte);
 		Debug.Log (Angle2);
+		this.GetComponent<SpriteRenderer> ().color = Rotation.elColor;
 	}
 
 	// Update is called once per frame
@@ -42,6 +43,7 @@ public class Disparo : MonoBehaviour {
 		}
 		if (other.gameObject.GetComponent<LifeBasics> () != null) {
 			if (!other.gameObject.GetComponent<LifeBasics> ().isPlayer && (other.gameObject.GetComponent<SpriteRenderer>().color.Equals(this.gameObject.GetComponent<SpriteRenderer>().color)||other.gameObject.GetComponent<SpriteRenderer>().color.Equals(Color.white))) {
+				score.puntaje = score.puntaje+50;
 				other.gameObject.GetComponent<LifeBasics>().LifeSettings.lifes--;
 				Destroy(this.gameObject);
 			}

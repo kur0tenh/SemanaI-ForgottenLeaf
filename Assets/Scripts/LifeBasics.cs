@@ -21,10 +21,20 @@ public class LifeBasics : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//Debug.Log (score.puntaje);
 		if (LifeSettings.lifes > 0) {
 			if (LifeSettings.health <= 0) {
 				LifeSettings.lifes--;
-				
+				if(isPlayer && score.puntaje> PlayerPrefs.GetInt("puntaje1"))
+					PlayerPrefs.SetInt("puntaje1",score.puntaje);
+				else if(isPlayer && score.puntaje> PlayerPrefs.GetInt("puntaje2"))
+					PlayerPrefs.SetInt("puntaje2",score.puntaje);
+				else if(isPlayer && score.puntaje> PlayerPrefs.GetInt("puntaje3"))
+					PlayerPrefs.SetInt("puntaje3",score.puntaje);
+				else if(isPlayer && score.puntaje> PlayerPrefs.GetInt("puntaje4"))
+					PlayerPrefs.SetInt("puntaje4",score.puntaje);
+				else if(isPlayer && score.puntaje> PlayerPrefs.GetInt("puntaje5"))
+					PlayerPrefs.SetInt("puntaje5",score.puntaje);
 				SpecialEffectsHelper.Instance.Explosion(transform.position);
 			}
 			
