@@ -29,7 +29,7 @@ public class Dnave4 : MonoBehaviour {
 		if (AmmoType.GetComponent<BulletVerde>() != null)
 			AmmoType.GetComponent<BulletVerde> ().Angle = Quaternion.Euler (0, 0, angulo);
 				Instantiate (AmmoType);
-				SoundEffectsHelper1.Instance.makeShootingSound();
+				//SoundEffectsHelper1.Instance.makeShootingSound();
 				//StartCoroutine(sr (1));
 			}
 }
