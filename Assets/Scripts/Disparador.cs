@@ -7,6 +7,10 @@ public class Disparador : MonoBehaviour {
 	//public int ShootingRate=0.1;
 	public int n;
 	public int limite;
+	public float yolo= 0;
+	public bool arriba = false;
+	public bool atras = false;
+	public bool abajo = false;
 
 
 	// Use this for initialization
@@ -32,27 +36,97 @@ public class Disparador : MonoBehaviour {
 	*/
 
 	void Shoot(){
-		if (control) {
-			if ((Input.GetAxis ("Fire1")==1||(Input.GetAxis ("Fire1")==-1))){	
-				AmmoType.GetComponent<SpriteRenderer>().color = this.GetComponentInParent<SpriteRenderer>().color;
-				AmmoType.GetComponent<Transform> ().position = this.transform.position;
-				AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
-				Instantiate (AmmoType);
-				SoundEffectsHelper1.Instance.makeShootingSound();
-				//StartCoroutine(sr (1));
-			}
+		if (!atras && !arriba && !abajo) {
+			if (control) {
+				if ((Input.GetAxis ("Fire1") == 1 || (Input.GetAxis ("Fire1") == -1))) {	
+					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
+					AmmoType.GetComponent<Transform> ().position = this.transform.position;
+					AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
+					Instantiate (AmmoType);
+					SoundEffectsHelper1.Instance.makeShootingSound ();
+					//StartCoroutine(sr (1));
+				}
 			
-		} else {
-			if (Input.GetKey ("up") ){
-				AmmoType.GetComponent<SpriteRenderer>().color = this.GetComponentInParent<SpriteRenderer>().color;
-				AmmoType.GetComponent<Transform> ().position = this.transform.position;
-				AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
-				Instantiate (AmmoType);
-				SoundEffectsHelper1.Instance.makeShootingSound();
-				//StartCoroutine(sr (1));
+			} else {
+				if (Input.GetKey ("up")) {
+					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
+					AmmoType.GetComponent<Transform> ().position = this.transform.position;
+					AmmoType.GetComponent<Disparo> ().Angle = this.transform.rotation;
+					Instantiate (AmmoType);
+					SoundEffectsHelper1.Instance.makeShootingSound ();
+					//StartCoroutine(sr (1));
 				
-			}
-		} 
+				}
+			} 
+		} else if (arriba && GetComponentInParent<Rotation>().lados) {
+			if (control) {
+				if ((Input.GetAxis ("Fire1") == 1 || (Input.GetAxis ("Fire1") == -1))) {	
+					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
+					AmmoType.GetComponent<Transform> ().position = this.transform.position;
+					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+45);
+					Instantiate (AmmoType);
+					SoundEffectsHelper1.Instance.makeShootingSound ();
+					//StartCoroutine(sr (1));
+				}
+				
+			} else {
+				if (Input.GetKey ("up")) {
+					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
+					AmmoType.GetComponent<Transform> ().position = this.transform.position;
+					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+45);
+					Instantiate (AmmoType);
+					SoundEffectsHelper1.Instance.makeShootingSound ();
+					//StartCoroutine(sr (1));
+					
+				}
+			} 
+		}
+		else if (abajo&& GetComponentInParent<Rotation>().lados) {
+			if (control) {
+				if ((Input.GetAxis ("Fire1") == 1 || (Input.GetAxis ("Fire1") == -1))) {	
+					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
+					AmmoType.GetComponent<Transform> ().position = this.transform.position;
+					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+270);
+					Instantiate (AmmoType);
+					SoundEffectsHelper1.Instance.makeShootingSound ();
+					//StartCoroutine(sr (1));
+				}
+				
+			} else {
+				if (Input.GetKey ("up")) {
+					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
+					AmmoType.GetComponent<Transform> ().position = this.transform.position;
+					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+270);
+					Instantiate (AmmoType);
+					SoundEffectsHelper1.Instance.makeShootingSound ();
+					//StartCoroutine(sr (1));
+					
+				}
+			} 
+		}
+		else if (atras&& GetComponentInParent<Rotation>().atras) {
+			if (control) {
+				if ((Input.GetAxis ("Fire1") == 1 || (Input.GetAxis ("Fire1") == -1))) {	
+					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
+					AmmoType.GetComponent<Transform> ().position = this.transform.position;
+					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+180);
+					Instantiate (AmmoType);
+					SoundEffectsHelper1.Instance.makeShootingSound ();
+					//StartCoroutine(sr (1));
+				}
+				
+			} else {
+				if (Input.GetKey ("up")) {
+					AmmoType.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
+					AmmoType.GetComponent<Transform> ().position = this.transform.position;
+					AmmoType.GetComponent<Disparo> ().Angle = Quaternion.Euler(0,0,this.transform.parent.rotation.z+180);
+					Instantiate (AmmoType);
+					SoundEffectsHelper1.Instance.makeShootingSound ();
+					//StartCoroutine(sr (1));
+					
+				}
+			} 
+		}
 	}
 
 

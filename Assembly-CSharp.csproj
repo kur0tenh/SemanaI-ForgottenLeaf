@@ -65,9 +65,11 @@
      <Compile Include="Assets\Scripts\Rotation.cs" />
      <Compile Include="Assets\Scripts\Rotation2.cs" />
      <Compile Include="Assets\Scripts\SoundEffectsHelper1.cs" />
+     <Compile Include="Assets\Scripts\balaHijo.cs" />
      <Compile Include="Assets\Scripts\colorCyan.cs" />
      <Compile Include="Assets\Scripts\creatEnemy.cs" />
      <Compile Include="Assets\Scripts\creator.cs" />
+     <Compile Include="Assets\SpecialEffectsHelper.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

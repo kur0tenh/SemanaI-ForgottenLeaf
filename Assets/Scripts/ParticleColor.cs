@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ParticleColor : MonoBehaviour {
-
+	public GameObject colori;
 	// Use this for initialization
 	void Start () {
 	
@@ -10,6 +10,5 @@ public class ParticleColor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.GetComponent<ParticleSystem>().startColor = this.GetComponentInParent<SpriteRenderer>().color;
-	}
-}
+			this.GetComponent<ParticleSystem> ().startColor = Rotation.elColor;
+	}}

@@ -1,28 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Disparo : MonoBehaviour {
-
+public class balaHijo : MonoBehaviour {
 	public Quaternion Angle = Quaternion.Euler(0,0,0);
 	public float Magnitude = 1;
 	public float tiempoMuerte;
 	public GameObject roti;
 	public Rotation roto;
+	public bool azul =true;
 	Vector2 Fwrd = new Vector2(0,1);
 	// Use this for initialization
-	
 	void Start () {
-		foreach(SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>()) {
-			sr.material.color = this.GetComponent<SpriteRenderer>().color;;
+		if (this.GetComponent<SpriteRenderer> ().color == Color.cyan)
+			azul = true;
+		else
+			azul = false;
+		foreach(ParticleSystem sr in GetComponentsInChildren<ParticleSystem>()) {
+			sr.startColor = this.GetComponentInParent<SpriteRenderer>().color;
 		}
-		this.transform.rotation = Angle;
+		this.transform.rotation = this.transform.parent.rotation;
+		this.GetComponent<SpriteRenderer> ().color = this.GetComponentInParent<SpriteRenderer> ().color;
 		Destroy (gameObject, tiempoMuerte);
 	}
-
+	
 	// Update is called once per frame
 	void FixedUpdate () {
-		//this.GetComponentsInChildren<SpriteRenderer>().  = this.GetComponent<SpriteRenderer> ;
-		this.transform.Translate(Fwrd * Magnitude);
 		//this.GetComponent<Rigidbody2D> ().velocity = Fwrd * Magnitude;
 		//this.GetComponent<Rigidbody2D>().AddForce(Fwrd*Magnitude);
 		

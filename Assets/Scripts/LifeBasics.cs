@@ -24,19 +24,22 @@ public class LifeBasics : MonoBehaviour {
 		if (LifeSettings.lifes > 0) {
 			if (LifeSettings.health <= 0) {
 				LifeSettings.lifes--;
+				
+				SpecialEffectsHelper.Instance.Explosion(transform.position);
 			}
 			
 		} else {
 			cont--;
 			//Destroy(this.gameObject);
 			this.gameObject.SetActive(false); 
-
+			SpecialEffectsHelper.Instance.Explosion(transform.position);
 		}
 	}	
 	void OnCollisionEnter2D(Collision2D HarmfullObject){
 		if (HarmfullObject.gameObject.GetComponent<LifeBasics> ()!=null) {
 			if(HarmfullObject.gameObject.GetComponent<LifeBasics>().isEnemy && this.isPlayer){
 				this.LifeSettings.lifes--;
+
 			}
 		} 
 	}
