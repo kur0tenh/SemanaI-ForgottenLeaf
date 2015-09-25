@@ -14,6 +14,6 @@ public class score : MonoBehaviour {
 	void Update () {
 
 		instruction.text = "Score: "+puntaje;
-
+		puntaje++;
 	}
 }
