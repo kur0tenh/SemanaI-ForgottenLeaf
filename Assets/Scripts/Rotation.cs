@@ -40,11 +40,11 @@ public class Rotation : MonoBehaviour {
 			if (Input.GetKey ("right")) {
 				transform.Rotate(0, 0,-rotationVelocity);
 			}
-			if(Input.GetKeyDown(KeyCode.Z)){
+			if(Input.GetKeyDown(KeyCode.Q)){
 				this.GetComponent<SpriteRenderer>().color = new Color(0,255,0,1);
 				rojo=true;
 			}
-				if(Input.GetKeyDown(KeyCode.X)){
+				if(Input.GetKeyDown(KeyCode.E)){
 					this.GetComponent<SpriteRenderer>().color = Color.cyan;
 				rojo =false;
 				}
